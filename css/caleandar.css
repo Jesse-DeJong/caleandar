@@ -1,0 +1,165 @@
+.cld-main {
+    width: 100%;
+}
+
+    .cld-main a {
+        color: #7B00FF;
+    }
+
+.cld-datetime {
+    position: relative;
+    width: 66%;
+    min-width: 100px;
+    max-width: 300px;
+    margin: auto;
+    overflow: hidden;
+}
+
+    .cld-datetime .today {
+        position: relative;
+        float: left;
+        width: calc(100% - 40px - 0.25rem);
+        margin: auto;
+        text-align: center;
+    }
+
+.cld-nav {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+    .cld-nav:hover {
+        cursor: pointer;
+    }
+
+        .cld-nav:hover svg {
+            fill: #666;
+        }
+
+.cld-rwd {
+    float: left;
+}
+
+.cld-fwd {
+    float: right;
+}
+
+.cld-labels, .cld-days {
+    padding-left: 0;
+}
+
+.cld-labels {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    height: 50px;
+}
+
+.cld-label, .cld-day {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 14.28%;
+    text-align: center;
+}
+
+.cld-day {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    float: left;
+    position: relative;
+    margin: 0;
+    padding: 5px;
+    /*height: 66px;*/
+    height: 130px;
+    border: 1px solid #ddd;
+}
+
+    .cld-day.clickable:hover {
+        cursor: pointer;
+    }
+
+    .cld-day.today {
+        /*border: 1px solid #7B00FF;*/
+        border: 2px solid #c3332a;
+        color: white;
+    }
+
+    .cld-day.disableDay {
+        opacity: 0.5;
+    }
+
+    /*.cld-day.nextMonth, .cld-day.prevMonth {*/
+    .cld-day.prevMonth {
+        opacity: 0.33;
+    }
+    .cld-day.currMonth:not(.disableDay) {
+        opacity: 1 !important;
+    }
+
+    .cld-number {
+        margin: 0;
+        text-align: left;
+        /*border-bottom: 1px solid #ddd;*/
+    }
+
+.cld-title {
+    font-size: 10px;
+    display: block;
+    margin: 0;
+    font-weight: normal;
+}
+
+.cld-day:not(.disableDay, .prevMonth, .offerDay):hover {
+    background: #eee;
+}
+
+.cld-number.eventday {
+    font-weight: bold;
+    margin-top: -2px;
+}
+
+    .cld-number.eventday:hover {
+        background: #eee;
+    }
+
+.cld-event {
+    display: flex;
+    /*height: calc(100% - 18px - 0.25rem - 1px);*/
+    height: 100%;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    overflow-y: auto;
+}
+
+.cld-sidebar {
+    height: 130px;
+    padding: 5px;
+    padding-top: 23px;
+}
+
+.cld-sidebar-rowSelect {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.holiday {
+    border: 1px solid rgba(76, 123, 199, 1);
+}
+
+.birthday {
+    border: 1px solid green;
+}
+
+.AM, .PM, .ND {
+    color: var(--bs-text-level-3);
+}
